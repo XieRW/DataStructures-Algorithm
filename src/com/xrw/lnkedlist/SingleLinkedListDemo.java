@@ -13,26 +13,48 @@ import java.util.Scanner;
 public class SingleLinkedListDemo {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+//        Scanner in = new Scanner(System.in);
+////        SingleLinkedList singleLinkedList = new SingleLinkedList();
+////        for (int i = 0; i < 10; i++) {
+////            System.out.printf("请输入第%d个节点的课程编号\t",i+1);
+////            int no = in.nextInt();
+////            System.out.printf("请输入第%d个节点的课程名称\t",i+1);
+////            String name = in.next();
+////            System.out.printf("请输入第%d个节点的课程难度\t",i+1);
+////            String hard = in.next();
+////
+////            Course course = new Course(no, name, hard);
+////
+////            singleLinkedList.add(course);
+////            System.out.println("链表每个节点的元素为：");
+////            singleLinkedList.list();
+////        }
+////        System.out.println("整理单链表：依次访问单链表的每个元素，如果是奇数，将其删除， 如果是偶数，就在其前面插入-1");
+////
+////        singleLinkedList.clear();
+////        System.out.println("整理后的链表为：");
+////        singleLinkedList.list();
+
         SingleLinkedList singleLinkedList = new SingleLinkedList();
-        for (int i = 0; i < 10; i++) {
-            System.out.printf("请输入第%d个节点的课程编号\t",i+1);
-            int no = in.nextInt();
-            System.out.printf("请输入第%d个节点的课程名称\t",i+1);
-            String name = in.next();
-            System.out.printf("请输入第%d个节点的课程难度\t",i+1);
-            String hard = in.next();
+        singleLinkedList.add(new Course(1, "1", "1"));
+        singleLinkedList.add(new Course(3, "3", "3"));
+        singleLinkedList.add(new Course(5, "5", "5"));
+        singleLinkedList.add(new Course(7, "7", "7"));
+        singleLinkedList.add(new Course(9, "9", "9"));
+        SingleLinkedList singleLinkedList2 = new SingleLinkedList();
+        singleLinkedList2.add(new Course(2, "2", "2"));
+        singleLinkedList2.add(new Course(4, "4", "4"));
+        singleLinkedList2.add(new Course(6, "6", "6"));
+        singleLinkedList2.add(new Course(8, "8", "8"));
+        singleLinkedList2.add(new Course(10, "10", "10"));
 
-            Course course = new Course(no, name, hard);
-
-            singleLinkedList.add(course);
-            System.out.println("链表每个节点的元素为：");
-            singleLinkedList.list();
-        }
-        System.out.println("整理单链表：依次访问单链表的每个元素，如果是奇数，将其删除， 如果是偶数，就在其前面插入-1");
-
-        singleLinkedList.clear();
-        System.out.println("整理后的链表为：");
+        System.out.println("合并前的单链表：");
+        System.out.println("链表1：");
+        singleLinkedList.list();
+        System.out.println("链表2：");
+        singleLinkedList2.list();
+        System.out.println("合并后的单链表：");
+        singleLinkedList.merge(singleLinkedList2);
         singleLinkedList.list();
     }
 }
@@ -152,7 +174,7 @@ class SingleLinkedList {
         Course temp = headNode;
         while (true) {
             if (temp.next == null) {
-                System.out.printf("要删除的编号为%d的节点不存在",no);
+                System.out.printf("要删除的编号为%d的节点不存在", no);
                 break;
             }
             if (temp.next.no == no) {
@@ -171,11 +193,11 @@ class SingleLinkedList {
      */
     public void list() {
         Course temp = headNode.next;
-        if (temp == null){
-            System.out.println("链表为空~~~");;
+        if (temp == null) {
+            System.out.println("链表为空~~~");
         }
-        while (true){
-            if (temp == null){
+        while (true) {
+            if (temp == null) {
                 break;
             }
             System.out.println(temp);
@@ -192,14 +214,14 @@ class SingleLinkedList {
      */
     public Course searchByName(String name) {
         Course temp = headNode.next;
-        if (temp == null){
+        if (temp == null) {
             throw new RuntimeException("课程不存在！");
         }
-        while (true){
-            if (temp == null){
+        while (true) {
+            if (temp == null) {
                 throw new RuntimeException("课程不存在！");
             }
-            if (temp.name.contains(name)){
+            if (temp.name.contains(name)) {
                 return temp;
             }
             temp = temp.next;
@@ -211,22 +233,49 @@ class SingleLinkedList {
      * @Author: 谢荣旺
      * @Date: 2021/4/8
      */
-    public void clear(){
+    public void clear() {
         Course temp = headNode;
 
-        while (true){
-            if (temp.next == null){
+        while (true) {
+            if (temp.next == null) {
                 return;
             }
-            if (temp.next.no%2 == 1){
+            if (temp.next.no % 2 == 1) {
                 temp.next = temp.next.next;
-            }else if (temp.next.no%2 == 0){
-                Course course = new Course(-1,"默认","default");
+            } else if (temp.next.no % 2 == 0) {
+                Course course = new Course(-1, "默认", "default");
                 course.next = temp.next;
                 temp.next = course;
-                temp = temp.next;
+                temp = temp.next.next;
             }
-            temp = temp.next;
+        }
+    }
+
+    /**
+     * @Description: 合并有序单链表
+     * @Author: 谢荣旺
+     * @Date: 2021/4/8
+     */
+    public void merge(SingleLinkedList list) {
+        Course temp = headNode;
+        Course temp2 = list.getHeadNode();
+        Course merge;
+        while (true) {
+            if (temp2.next == null) {
+                return;
+            }
+            if (temp.next == null) {
+                temp.next = temp2.next;
+                return;
+            }
+            if (temp.next.no <= temp2.next.no) {
+                temp = temp.next;
+            } else {
+                merge = temp2.next;
+                temp2.next = temp2.next.next;
+                merge.next = temp.next;
+                temp.next = merge;
+            }
         }
     }
 }

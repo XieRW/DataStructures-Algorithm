@@ -32,7 +32,7 @@ public class BinaryTreeTest {
         System.out.println();
 
         System.out.println("二叉树的中序遍历为：");
-        binaryTree.listByIndix();
+        binaryTree.listByInfix();
         System.out.println();
 
         System.out.println("二叉树的后序遍历为：");
@@ -43,6 +43,18 @@ public class BinaryTreeTest {
 
         System.out.println("二叉树叶子节点为：");
         System.out.printf("二叉树叶子节点个数为：%d\n",binaryTree.leafNode());
+
+        System.out.println("前序非递归遍历二叉树：");
+        binaryTree.listByPreWithNonRecursive();
+        System.out.println();
+
+        System.out.println("中序非递归遍历二叉树：");
+        binaryTree.listByInfixWithNonRecursive();
+        System.out.println();
+
+        System.out.println("后序非递归遍历二叉树：");
+        binaryTree.listByPostWithNonRecursive();
+        System.out.println();
 
     }
 }
@@ -68,8 +80,8 @@ class BinaryTree{
         rootNode.listByPre();
     }
 
-    public void listByIndix(){
-        rootNode.listByIndix();
+    public void listByInfix(){
+        rootNode.listByInfix();
     }
 
     public void listByPost(){
@@ -82,6 +94,18 @@ class BinaryTree{
 
     public int leafNode(){
         return rootNode.leftNode();
+    }
+
+    public void listByPreWithNonRecursive(){
+        rootNode.listByPreWithNonRecursive();
+    }
+
+    public void listByInfixWithNonRecursive(){
+        rootNode.listByInfixWithNonRecursive();
+    }
+
+    public void listByPostWithNonRecursive(){
+        rootNode.listByPostWithNonRecursive();
     }
 }
 
@@ -135,13 +159,13 @@ class TreeNode{
         }
     }
 
-    public void listByIndix(){
+    public void listByInfix(){
         if (left != null){
-            left.listByIndix();
+            left.listByInfix();
         }
         System.out.print(this);
         if (right != null){
-            right.listByIndix();
+            right.listByInfix();
         }
     }
 
@@ -183,5 +207,67 @@ class TreeNode{
             num += right.leftNode();
         }
         return num;
+    }
+
+    public void listByPreWithNonRecursive(){
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(this);
+        TreeNode temp;
+
+        while (!stack.isEmpty()){
+            temp = stack.pop();
+            System.out.print(temp.data);
+            if (temp.right != null){
+                stack.push(temp.right);
+            }
+            if (temp.left != null){
+                stack.push(temp.left);
+            }
+        }
+    }
+
+    public void listByInfixWithNonRecursive(){
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(this);
+        TreeNode temp;
+
+        while (!stack.isEmpty()){
+            temp = stack.peek();
+            while (temp.left != null){
+                stack.push(temp.left);
+                temp = temp.left;
+            }
+            temp = stack.pop();
+            System.out.print(temp.data);
+            while (temp.right == null && !stack.empty()){
+                temp = stack.pop();
+                System.out.print(temp.data);
+            }
+            if (temp.right != null){
+                stack.push(temp.right);
+            }
+        }
+    }
+
+    public void listByPostWithNonRecursive(){
+        Stack<TreeNode> stack = new Stack<>();
+        Stack<TreeNode> stack2 = new Stack<>();
+        stack.push(this);
+        TreeNode temp;
+
+        while (!stack.isEmpty()){
+            temp = stack.pop();
+            stack2.push(temp);
+            if (temp.left != null){
+                stack.push(temp.left);
+            }
+            if (temp.right != null){
+                stack.push(temp.right);
+            }
+        }
+
+        while (!stack2.isEmpty()){
+            System.out.print(stack2.pop());
+        }
     }
 }

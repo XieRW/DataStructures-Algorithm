@@ -1,5 +1,8 @@
 package com.xrw.tree;
 
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -54,6 +57,10 @@ public class BinaryTreeTest {
 
         System.out.println("后序非递归遍历二叉树：");
         binaryTree.listByPostWithNonRecursive();
+        System.out.println();
+
+        System.out.println("层次遍历二叉树：");
+        binaryTree.listByLevel();
         System.out.println();
 
     }
@@ -159,6 +166,17 @@ class BinaryTree{
     public void listByPostWithNonRecursive(){
         rootNode.listByPostWithNonRecursive();
     }
+
+    /**
+     * @Description: 树的层次遍历
+     * @Author: 谢荣旺
+     * @Date: 2021/4/27
+     */
+    public void listByLevel(){
+        rootNode.listByLevel();
+    }
+
+
 }
 
 /**
@@ -388,6 +406,21 @@ class TreeNode{
         //通过栈，将遍历的结果反向输出
         while (!stack2.isEmpty()){
             System.out.print(stack2.pop());
+        }
+    }
+
+    public void listByLevel(){
+        Queue<TreeNode> list = new LinkedList<>();
+        TreeNode temp;
+        list.add(this);
+
+        while (!list.isEmpty()){
+            for (int i = 0;i<list.size();i++){
+                temp = list.poll();
+                System.out.print(temp.data);
+                list.add(temp.left);
+                list.add(temp.right);
+            }
         }
     }
 }

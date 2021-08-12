@@ -1,20 +1,23 @@
-package com.xrw.lnkedlist;
-
-import sun.plugin.dom.core.CoreConstants;
+package com.xrw.linkedlist;
 
 import java.util.Scanner;
 
 /**
  * @program: DataStructures
  * @description: 单链表
+ *
+ * 键盘输入9个数，保存为单链表
+ * 输出这9个数（2,3,6,8,9,12,23,45,55）
+ * 插入数25
+ * 将25插入单链表并保持单链表的有序性，然后输出单链表（2,3,6,8,9,12,23,25,45,55）
  * @author: 谢荣旺 1429382875@qq.com
- * @create: 2021-04-01 23:20
+ * @create: 2021-06-01 23:20
  **/
-public class SingleLinkedListDemo {
+public class SingleLinkedListDemo2 {
 
     public static void main(String[] args) {
 //        Scanner in = new Scanner(System.in);
-////        SingleLinkedList singleLinkedList = new SingleLinkedList();
+////        SingleLinkedList2 singleLinkedList = new SingleLinkedList2();
 ////        for (int i = 0; i < 10; i++) {
 ////            System.out.printf("请输入第%d个节点的课程编号\t",i+1);
 ////            int no = in.nextInt();
@@ -23,7 +26,7 @@ public class SingleLinkedListDemo {
 ////            System.out.printf("请输入第%d个节点的课程难度\t",i+1);
 ////            String hard = in.next();
 ////
-////            Course course = new Course(no, name, hard);
+////            Course2 course = new Course2(no, name, hard);
 ////
 ////            singleLinkedList.add(course);
 ////            System.out.println("链表每个节点的元素为：");
@@ -35,26 +38,40 @@ public class SingleLinkedListDemo {
 ////        System.out.println("整理后的链表为：");
 ////        singleLinkedList.list();
 
-        SingleLinkedList singleLinkedList = new SingleLinkedList();
-        singleLinkedList.add(new Course(1, "1", "1"));
-        singleLinkedList.add(new Course(3, "3", "3"));
-        singleLinkedList.add(new Course(5, "5", "5"));
-        singleLinkedList.add(new Course(7, "7", "7"));
-        singleLinkedList.add(new Course(9, "9", "9"));
-        SingleLinkedList singleLinkedList2 = new SingleLinkedList();
-        singleLinkedList2.add(new Course(2, "2", "2"));
-        singleLinkedList2.add(new Course(4, "4", "4"));
-        singleLinkedList2.add(new Course(6, "6", "6"));
-        singleLinkedList2.add(new Course(8, "8", "8"));
-        singleLinkedList2.add(new Course(10, "10", "10"));
+//        SingleLinkedList2 singleLinkedList = new SingleLinkedList2();
+//        singleLinkedList.add(new Course2(1, "1", "1"));
+//        singleLinkedList.add(new Course2(3, "3", "3"));
+//        singleLinkedList.add(new Course2(5, "5", "5"));
+//        singleLinkedList.add(new Course2(7, "7", "7"));
+//        singleLinkedList.add(new Course2(9, "9", "9"));
+//        SingleLinkedList2 singleLinkedList2 = new SingleLinkedList2();
+//        singleLinkedList2.add(new Course2(2, "2", "2"));
+//        singleLinkedList2.add(new Course2(4, "4", "4"));
+//        singleLinkedList2.add(new Course2(6, "6", "6"));
+//        singleLinkedList2.add(new Course2(8, "8", "8"));
+//        singleLinkedList2.add(new Course2(10, "10", "10"));
+//
+//        System.out.println("合并前的单链表：");
+//        System.out.println("链表1：");
+//        singleLinkedList.list();
+//        System.out.println("链表2：");
+//        singleLinkedList2.list();
+//        System.out.println("合并后的单链表：");
+//        singleLinkedList.merge(singleLinkedList2);
+//        singleLinkedList.list();
 
-        System.out.println("合并前的单链表：");
-        System.out.println("链表1：");
+        SingleLinkedList2 singleLinkedList = new SingleLinkedList2();
+        Scanner in = new Scanner(System.in);
+        for (int i = 0; i < 9; i++) {
+            System.out.println("请输入第" + i + "个数");
+            int num = in.nextInt();
+            singleLinkedList.add(new Course2(num));
+        }
+        System.out.println("输出单链表：");
         singleLinkedList.list();
-        System.out.println("链表2：");
-        singleLinkedList2.list();
-        System.out.println("合并后的单链表：");
-        singleLinkedList.merge(singleLinkedList2);
+        System.out.println("插入节点25");
+        singleLinkedList.addNode(25);
+        System.out.println("输出插入节点25后的单链表：");
         singleLinkedList.list();
     }
 }
@@ -62,19 +79,19 @@ public class SingleLinkedListDemo {
 /**
  * @Description: 单链表
  * @Author: 谢荣旺
- * @Date: 2021/4/1
+ * @Date: 2021/6/1
  */
-class SingleLinkedList {
+class SingleLinkedList2 {
     //创建一个头结点，不存放数据
-    Course headNode = new Course(0, "", "");
+    Course2 headNode = new Course2(0, "", "");
 
     /**
      * @Description: 获取头结点
-     * @return: com.xrw.lnkedlist.Course
+     * @return: com.xrw.lnkedlist.Course2
      * @Author: 谢荣旺
-     * @Date: 2021/4/1
+     * @Date: 2021/6/1
      */
-    public Course getHeadNode() {
+    public Course2 getHeadNode() {
         return headNode;
     }
 
@@ -85,10 +102,10 @@ class SingleLinkedList {
      * 1、用一个辅助节点temp去遍历链表，temp的初始值temp=headNode
      * 2、循环移动temp:temp = temp.next,如果temp.next为空则将要加入的节点插入：temp.next = course
      * @Author: 谢荣旺
-     * @Date: 2021/4/1
+     * @Date: 2021/6/1
      */
-    public void add(Course course) {
-        Course temp = headNode;
+    public void add(Course2 course) {
+        Course2 temp = headNode;
         while (true) {
             if (temp.next == null) {
                 break;
@@ -108,10 +125,10 @@ class SingleLinkedList {
      * 3.2、如果temp.next.no == course.no，那么返回错误提示,退出循环
      * 3.3，如果temp.next.no > course.no，那么将course插入入到temp和temp.next之间,course.next = temp.next,temp.next = course,退出循环
      * @Author: 谢荣旺
-     * @Date: 2021/4/1
+     * @Date: 2021/6/1
      */
-    public void addByOrder(Course course) {
-        Course temp = headNode;
+    public void addByOrder(Course2 course) {
+        Course2 temp = headNode;
         while (true) {
             if (temp.next == null) {
                 break;
@@ -139,10 +156,10 @@ class SingleLinkedList {
      * 4.1如果temp == null，那么返回错误提示，退出循环
      * 4.2如果temp.no == course.no,那么temp.name = course.name，temp.hard = course.hard
      * @Author: 谢荣旺
-     * @Date: 2021/4/1
+     * @Date: 2021/6/1
      */
-    public void update(Course course) {
-        Course temp = headNode.next;
+    public void update(Course2 course) {
+        Course2 temp = headNode.next;
         if (temp == null) {
             System.out.printf("链表为空");
         }
@@ -168,10 +185,10 @@ class SingleLinkedList {
      * 2.2如果temp.next.no == no,那么temp.next = temp.next.next
      * 3、循环移动temp:temp = temp.next
      * @Author: 谢荣旺
-     * @Date: 2021/4/1
+     * @Date: 2021/6/1
      */
     public void delete(int no) {
-        Course temp = headNode;
+        Course2 temp = headNode;
         while (true) {
             if (temp.next == null) {
                 System.out.printf("要删除的编号为%d的节点不存在", no);
@@ -189,10 +206,10 @@ class SingleLinkedList {
      * @Description: 遍历显示每个节点的数据
      * 实现思路：用一个辅助节点temp去遍历
      * @Author: 谢荣旺
-     * @Date: 2021/4/1
+     * @Date: 2021/6/1
      */
     public void list() {
-        Course temp = headNode.next;
+        Course2 temp = headNode.next;
         if (temp == null) {
             System.out.println("链表为空~~~");
         }
@@ -210,10 +227,10 @@ class SingleLinkedList {
      * @Description: 通过课程名称查找节点
      * @return: 查找到的节点
      * @Author: 谢荣旺
-     * @Date: 2021/4/1
+     * @Date: 2021/6/1
      */
-    public Course searchByName(String name) {
-        Course temp = headNode.next;
+    public Course2 searchByName(String name) {
+        Course2 temp = headNode.next;
         if (temp == null) {
             throw new RuntimeException("课程不存在！");
         }
@@ -234,7 +251,7 @@ class SingleLinkedList {
      * @Date: 2021/4/8
      */
     public void clear() {
-        Course temp = headNode;
+        Course2 temp = headNode;
 
         while (true) {
             if (temp.next == null) {
@@ -243,7 +260,7 @@ class SingleLinkedList {
             if (temp.next.no % 2 == 1) {
                 temp.next = temp.next.next;
             } else if (temp.next.no % 2 == 0) {
-                Course course = new Course(-1, "默认", "default");
+                Course2 course = new Course2(-1, "默认", "default");
                 course.next = temp.next;
                 temp.next = course;
                 temp = temp.next.next;
@@ -256,10 +273,10 @@ class SingleLinkedList {
      * @Author: 谢荣旺
      * @Date: 2021/4/8
      */
-    public void merge(SingleLinkedList list) {
-        Course temp = headNode;
-        Course temp2 = list.getHeadNode();
-        Course merge;
+    public void merge(SingleLinkedList2 list) {
+        Course2 temp = headNode;
+        Course2 temp2 = list.getHeadNode();
+        Course2 merge;
         while (true) {
             if (temp2.next == null) {
                 return;
@@ -278,14 +295,35 @@ class SingleLinkedList {
             }
         }
     }
+
+    /**
+     * 插入一个节点，保持链表有序性
+     * @param no
+     */
+    public void addNode(int no) {
+        Course2 course2 = new Course2(no);
+        Course2 temp = headNode;
+        while (true) {
+            if (temp.next == null) {
+                break;
+            }
+            if (temp.next.no > no) {
+                course2.next = temp.next;
+                temp.next = course2;
+                return;
+            }
+            temp = temp.next;
+        }
+        temp.next = course2;
+    }
 }
 
 /**
  * @Description: 单链表的节点类
  * @Author: 谢荣旺
- * @Date: 2021/4/1
+ * @Date: 2021/6/1
  */
-class Course {
+class Course2 {
     //课程编号
     int no;
     //课程名称
@@ -293,15 +331,19 @@ class Course {
     //课程难度
     String hard;
     //指向下一个节点
-    Course next;
+    Course2 next;
 
     /**
      * @Description: 构造函数
      */
-    public Course(int no, String name, String hard) {
+    public Course2(int no, String name, String hard) {
         this.no = no;
         this.name = name;
         this.hard = hard;
+    }
+
+    public Course2(int no) {
+        this.no = no;
     }
 
     /**
@@ -309,10 +351,6 @@ class Course {
      */
     @Override
     public String toString() {
-        return "Course{" +
-                "no=" + no +
-                ", name=" + name +
-                ", hard=" + hard +
-                '}';
+        return no + "";
     }
 }

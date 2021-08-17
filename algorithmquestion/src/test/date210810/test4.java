@@ -1,6 +1,5 @@
-package test.date21810;
+package test.date210810;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class test4 {

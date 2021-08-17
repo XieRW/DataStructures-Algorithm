@@ -1,6 +1,7 @@
 package test.date210817;
 
 /**
+ * 实现Runnable接口创建线程
  * 内部类实现线程设计，4个线程，其中,一个线程对j增加1，两个线程每次对j增加1，另外两个线程对j每次减少1
  */
 public class Test1 {

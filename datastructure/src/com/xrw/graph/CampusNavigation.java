@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * @program: DataStructures
- * @description: 校园导航问题
+ * @description: 校园导航问题-迪杰斯特拉算法
  * 地图数据来源于百度地图坐标拾取https://api.map.baidu.com/lbsapi/getpoint/index.html
  * 将13个景点构造成图，用邻接表结构存储
  *

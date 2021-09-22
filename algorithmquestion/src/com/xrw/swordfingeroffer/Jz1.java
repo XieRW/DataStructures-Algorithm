@@ -54,14 +54,14 @@ public class Jz1 {
                 arr[i][j] = in.nextInt();
             }
         }
-        System.out.println(Find(n,arr));
+        System.out.println(Find(n, arr));
     }
 
-    static boolean Find(int target, int [][] array) {
-        if(array == null || array.length == 0 ||array[0] == null || array[0].length == 0){
+    static boolean Find(int target, int[][] array) {
+        if (array == null || array.length == 0 || array[0] == null || array[0].length == 0) {
             return false;
         }
-        return find2(array,0,array[0].length-1,0,array.length-1,target);
+        return find2(array, 0, array[0].length - 1, 0, array.length - 1, target);
     }
 
     static boolean find2(int[][] arr, int left, int right, int top, int low, int n) {

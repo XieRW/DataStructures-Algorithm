@@ -27,7 +27,7 @@ public class Jz2 {
     static String replaceSpace(String s) {
         // write code here
         //第一种解法
-        return s.replaceAll(" ","%20");
+        return s.replaceAll(" ", "%20");
         //第二种解法
 //        StringBuilder sb = new StringBuilder();
 //        if(s == null || "".equals(s)){

@@ -17,6 +17,7 @@ public class Jz6 {
             int mid = 0;
             int high = array.length - 1;
             while (low < high) {
+                // 子数组是非递减的数组，10111
                 if (array[low] < array[high]) {
                     return array[low];
                 }

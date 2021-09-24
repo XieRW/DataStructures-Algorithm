@@ -18,5 +18,14 @@ public class Jz7 {
             }
             return Fibonacci(n-1)+Fibonacci(n-2);
         }
+        //½â·¨¶þ
+        public int Fibonacci2(int n){
+            int a=0,b=1;
+            for (int i = 1; i <= n; i++) {
+                a=a+b;
+                b=a-b;
+            }
+            return a;
+        }
     }
 }

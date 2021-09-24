@@ -22,6 +22,9 @@ public class Jz9 {
             return (int) Math.pow(2, target - 1);
         }
 
-
+        //½â·¨Èý
+        public int jumpFloorII3(int target) {
+            return 1<<(target-1);
+        }
     }
 }

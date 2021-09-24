@@ -17,6 +17,11 @@ public class Jz9 {
             return a;
         }
 
+        //½â·¨¶þ
+        public int jumpFloorII2(int target) {
+            return (int) Math.pow(2, target - 1);
+        }
+
 
     }
 }

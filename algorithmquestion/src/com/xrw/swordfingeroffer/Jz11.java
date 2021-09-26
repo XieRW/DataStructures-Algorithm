@@ -34,7 +34,7 @@ public class Jz11 {
             int num = 0;
             while (n != 0) {
                 num++;
-                n &= (n-1);
+                n &= (n - 1);
             }
             return num;
         }

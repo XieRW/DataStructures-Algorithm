@@ -29,6 +29,14 @@ public class Jz11 {
             return num;
         }
 
-
+        //解法二:独特思路,整数n，进行n&(n-1)运算，会把二进制表示中最右边的1变为0。
+        public int NumberOf2(int n) {
+            int num = 0;
+            while (n != 0) {
+                num++;
+                n &= (n-1);
+            }
+            return num;
+        }
     }
 }

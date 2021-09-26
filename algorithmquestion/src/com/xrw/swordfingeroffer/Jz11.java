@@ -8,6 +8,7 @@ package com.xrw.swordfingeroffer;
  **/
 public class Jz11 {
     public static class Solution {
+
         public static void main(String[] args) {
             Solution solution = new Solution();
             System.out.println(solution.NumberOf1(-1));

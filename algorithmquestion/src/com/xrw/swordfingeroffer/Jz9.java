@@ -24,7 +24,7 @@ public class Jz9 {
 
         //½â·¨Èý
         public int jumpFloorII3(int target) {
-            return 1<<(target-1);
+            return 1 << (target - 1);
         }
     }
 }

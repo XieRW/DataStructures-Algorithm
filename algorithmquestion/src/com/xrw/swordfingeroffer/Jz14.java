@@ -28,8 +28,6 @@ public class Jz14 {
          * @param k int整型
          * @return ListNode类
          */
-        int size;
-
         //解法一：双指针法
         public ListNode FindKthToTail(ListNode pHead, int k) {
             // write code here

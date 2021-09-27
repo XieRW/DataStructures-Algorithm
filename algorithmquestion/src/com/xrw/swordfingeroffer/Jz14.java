@@ -51,15 +51,15 @@ public class Jz14 {
         //½â·¨¶þ£ºÕ»
         public ListNode FindKthToTail2(ListNode pHead, int k) {
             // write code here
-            if (pHead == null){
+            if (pHead == null) {
                 return null;
             }
             Stack<ListNode> stack = new Stack<>();
-            while (pHead!=null){
+            while (pHead != null) {
                 stack.push(pHead);
                 pHead = pHead.next;
             }
-            if (stack.size()<k){
+            if (stack.size() < k) {
                 return null;
             }
             ListNode node = new ListNode(0);

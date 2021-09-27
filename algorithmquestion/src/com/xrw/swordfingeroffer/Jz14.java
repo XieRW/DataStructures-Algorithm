@@ -1,7 +1,5 @@
 package com.xrw.swordfingeroffer;
 
-import java.util.Scanner;
-
 /**
  * @program: DataStructures
  * @description: 剑指offer第十四题
@@ -18,7 +16,6 @@ public class Jz14 {
             this.val = val;
         }
     }
-
 
     public class Solution {
         /**

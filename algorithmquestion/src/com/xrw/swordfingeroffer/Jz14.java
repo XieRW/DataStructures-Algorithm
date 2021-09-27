@@ -1,5 +1,7 @@
 package com.xrw.swordfingeroffer;
 
+import java.util.Stack;
+
 /**
  * @program: DataStructures
  * @description: 剑指offer第十四题
@@ -44,6 +46,29 @@ public class Jz14 {
                 last = last.next;
             }
             return last;
+        }
+
+        //解法二：栈
+        public ListNode FindKthToTail2(ListNode pHead, int k) {
+            // write code here
+            if (pHead == null){
+                return null;
+            }
+            Stack<ListNode> stack = new Stack<>();
+            while (pHead!=null){
+                stack.push(pHead);
+                pHead = pHead.next;
+            }
+            if (stack.size()<k){
+                return null;
+            }
+            ListNode node = new ListNode(0);
+            for (int i = 0; i < k; i++) {
+                ListNode temp = stack.pop();
+                temp.next = node.next;
+                node.next = temp;
+            }
+            return node.next;
         }
     }
 }

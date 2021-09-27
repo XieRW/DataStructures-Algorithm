@@ -8,18 +8,19 @@ package com.xrw.swordfingeroffer;
  **/
 public class Jz15 {
 
-public class ListNode {
-    int val;
-    ListNode next = null;
+    public class ListNode {
+        int val;
+        ListNode next = null;
 
-    ListNode(int val) {
-        this.val = val;
+        ListNode(int val) {
+            this.val = val;
+        }
     }
-}
+
     public class Solution {
         public ListNode ReverseList(ListNode head) {
             ListNode node = new ListNode(0);
-            while (head!=null){
+            while (head != null) {
                 ListNode temp = head;
                 head = head.next;
                 temp.next = node.next;

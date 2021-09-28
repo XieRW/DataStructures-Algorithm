@@ -60,5 +60,38 @@ public class Jz20 {
         }
     }
 
+    /**
+     *     解法二：优化上一个解法
+     */
+    public class Solution2 {
+        Stack<Integer> stack = new Stack<>();
+        Integer minElement = Integer.MAX_VALUE;
 
+        public void push(int node) {
+            if (node <= minElement) {
+                stack.push(minElement);
+                minElement = node;
+            }
+            stack.push(node);
+        }
+
+        public void pop() {
+            if (stack.empty()) {
+                return;
+            }
+            if (stack.peek().equals(minElement)) {
+                    stack.pop();
+                    minElement = stack.peek();
+            }
+            stack.pop();
+        }
+
+        public int top() {
+            return stack.peek();
+        }
+
+        public int min() {
+            return minElement;
+        }
+    }
 }

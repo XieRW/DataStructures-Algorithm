@@ -22,6 +22,7 @@ public class Jz22 {
 
      }
     public class Solution {
+         //思路：广度优先遍历
         public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
             if (root == null){
                 return new ArrayList<Integer>();

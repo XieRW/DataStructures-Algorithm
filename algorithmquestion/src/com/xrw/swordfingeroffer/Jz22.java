@@ -1,5 +1,7 @@
 package com.xrw.swordfingeroffer;
 
+import java.util.ArrayList;
+
 /**
  * @program: DataStructures
  * @description: JZ22 从上往下打印二叉树
@@ -8,4 +10,20 @@ package com.xrw.swordfingeroffer;
  * @create: 2021-09-29 14:11
  **/
 public class Jz22 {
+     public class TreeNode {
+     int val = 0;
+     TreeNode left = null;
+     TreeNode right = null;
+
+     public TreeNode(int val) {
+     this.val = val;
+
+     }
+
+     }
+    public class Solution {
+        public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
+
+        }
+    }
 }

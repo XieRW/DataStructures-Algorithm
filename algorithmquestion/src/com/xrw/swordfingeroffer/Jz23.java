@@ -13,36 +13,37 @@ package com.xrw.swordfingeroffer;
 public class Jz23 {
     public class Solution {
         //思路；根据二叉搜索树的特征 左子树<根<右子树，并且其所有子树都满足该特点来完成该题
-        public boolean VerifySquenceOfBST(int [] sequence) {
+        public boolean VerifySquenceOfBST(int[] sequence) {
             //树为空，返回false
-            if (sequence.length == 0){
+            if (sequence.length == 0) {
                 return false;
             }
             //判断树是否为二叉搜索树
-            return helpVerify(sequence,0,sequence.length-1);
+            return helpVerify(sequence, 0, sequence.length - 1);
         }
+
         //判断一个树是否是二叉搜索树
-        public boolean helpVerify(int [] sequence,int start ,int root){
+        public boolean helpVerify(int[] sequence, int start, int root) {
             //树的节点个数小于或等于1，返回true
-            if (start>=root){
+            if (start >= root) {
                 return true;
             }
             int i;
             int key = sequence[root];
             //找到左右子树的分界点
-            for (i=start; i < root; i++) {
-                if (sequence[i]>key){
+            for (i = start; i < root; i++) {
+                if (sequence[i] > key) {
                     break;
                 }
             }
             //如果右子树中有小于根节点的值，则返回false
             for (int j = i; j < root; j++) {
-                if (sequence[j]<key){
+                if (sequence[j] < key) {
                     return false;
                 }
             }
             //判断左、右子树是否是二叉搜索树
-            return helpVerify(sequence,start,i-1) && helpVerify(sequence,i,root-1);
+            return helpVerify(sequence, start, i - 1) && helpVerify(sequence, i, root - 1);
         }
     }
 }

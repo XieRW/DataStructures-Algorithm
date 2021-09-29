@@ -22,7 +22,9 @@ public class Jz24 {
      }
 
      }
-     //解法一：回溯法，每次找到叶子节点且路径和满足要求时，添加一个路径list到结果集中，然后通过回溯，把此路径经过的节点添加进去
+    /**
+     * 解法一：回溯法，每次找到叶子节点且路径和满足要求时，添加一个路径list到结果集中，然后通过回溯，把此路径经过的节点添加进去
+     */
     public class Solution {
         public ArrayList<ArrayList<Integer>> FindPath(TreeNode root, int target) {
             ArrayList<ArrayList<Integer>> lists = new ArrayList<>();

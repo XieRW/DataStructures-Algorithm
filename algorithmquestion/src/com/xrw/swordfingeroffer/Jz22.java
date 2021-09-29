@@ -23,7 +23,24 @@ public class Jz22 {
      }
     public class Solution {
         public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
-
+            if (root == null){
+                return new ArrayList<Integer>();
+            }
+            ArrayList<Integer> arrayList = new ArrayList<>();
+            ArrayList<TreeNode> node = new ArrayList<>();
+            node.add(root);
+            while (!node.isEmpty()){
+                arrayList.add(node.get(0).val);
+                root = node.get(0);
+                node.remove(0);
+                if (root.left!=null){
+                    node.add(root.left);
+                }
+                if (root.right != null){
+                    node.add(root.right);
+                }
+            }
+            return arrayList;
         }
     }
 }

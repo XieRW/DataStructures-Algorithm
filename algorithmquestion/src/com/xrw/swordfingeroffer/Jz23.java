@@ -12,7 +12,7 @@ package com.xrw.swordfingeroffer;
  **/
 public class Jz23 {
     public class Solution {
-        //思路；
+        //思路；根据二叉搜索树的特征 左子树<根<右子树，并且其所有子树都满足该特点来完成该题
         public boolean VerifySquenceOfBST(int [] sequence) {
             //树为空，返回false
             if (sequence.length == 0){

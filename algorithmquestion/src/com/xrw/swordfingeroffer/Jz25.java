@@ -19,15 +19,19 @@ public class Jz25 {
             this.label = label;
         }
     }
+
+    /**
+     * 思路：把节点放到列表里，然后遍历列表复制节点数据，第二次遍历列表复制节点random指针
+     */
     public class Solution {
         public RandomListNode Clone(RandomListNode pHead) {
             List<RandomListNode> list = new ArrayList<>();
             List<RandomListNode> list2 = new ArrayList<>();
-            while (pHead != null){
+            while (pHead != null) {
                 list.add(pHead);
                 pHead = pHead.next;
             }
-            if (list.size()<=0){
+            if (list.size() <= 0) {
                 return null;
             }
             RandomListNode node = new RandomListNode(list.get(0).label);
@@ -40,7 +44,7 @@ public class Jz25 {
             }
             for (int i = 0; i < list.size(); i++) {
                 int random = list.indexOf(list.get(i).random);
-                if (random>-1){
+                if (random > -1) {
                     list2.get(i).random = list2.get(random);
                 }
             }

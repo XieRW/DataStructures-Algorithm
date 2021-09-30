@@ -10,6 +10,7 @@ import java.util.List;
  * @create: 2021-09-29 17:22
  **/
 public class Jz25 {
+
     public class RandomListNode {
         int label;
         RandomListNode next = null;

@@ -15,6 +15,7 @@ public class Jz25 {
         int label;
         RandomListNode next = null;
         RandomListNode random = null;
+
         RandomListNode(int label) {
             this.label = label;
         }

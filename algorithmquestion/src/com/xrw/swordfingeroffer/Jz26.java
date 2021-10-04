@@ -62,8 +62,9 @@ public class Jz26 {
         TreeNode root = null;
 
         public TreeNode Convert(TreeNode pRootOfTree) {
-            if (pRootOfTree == null)
+            if (pRootOfTree == null) {
                 return null;
+            }
             Convert(pRootOfTree.left);
             if (root == null) {
                 root = pRootOfTree;
@@ -85,8 +86,9 @@ public class Jz26 {
         TreeNode pre = null;
 
         public TreeNode Convert(TreeNode pRootOfTree) {
-            if (pRootOfTree == null)
+            if (pRootOfTree == null) {
                 return null;
+            }
             Convert(pRootOfTree.right);
             if (pre != null) {
                 pRootOfTree.right = pre;

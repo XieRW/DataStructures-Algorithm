@@ -54,5 +54,23 @@ public class Jz26 {
         }
     }
 
-
+    public class Solution2 {
+        TreeNode pre=null;
+        TreeNode root=null;
+        public TreeNode Convert(TreeNode pRootOfTree) {
+            if (pRootOfTree==null)
+                return null;
+            Convert(pRootOfTree.left);
+            if (root==null){
+                root=pRootOfTree;
+            }
+            if (pre!= null){
+                pRootOfTree.left=pre;
+                pre.right=pRootOfTree;
+            }
+            pre=pRootOfTree;
+            Convert(pRootOfTree.right);
+            return root;
+        }
+    }
 }

@@ -77,7 +77,9 @@ public class Jz26 {
         }
     }
 
-
+    /**
+     * 解法三 后续遍历法
+     */
     public class Solution3 {
         TreeNode pre=null;
         public TreeNode Convert(TreeNode pRootOfTree) {

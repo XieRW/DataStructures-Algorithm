@@ -58,41 +58,25 @@ public class Jz26 {
      * 前序遍历法
      */
     public class Solution2 {
-        TreeNode pre=null;
-        TreeNode root=null;
+        TreeNode pre = null;
+        TreeNode root = null;
+
         public TreeNode Convert(TreeNode pRootOfTree) {
-            if (pRootOfTree==null)
+            if (pRootOfTree == null)
                 return null;
             Convert(pRootOfTree.left);
-            if (root==null){
-                root=pRootOfTree;
+            if (root == null) {
+                root = pRootOfTree;
             }
-            if (pre!= null){
-                pRootOfTree.left=pre;
-                pre.right=pRootOfTree;
+            if (pre != null) {
+                pRootOfTree.left = pre;
+                pre.right = pRootOfTree;
             }
-            pre=pRootOfTree;
+            pre = pRootOfTree;
             Convert(pRootOfTree.right);
             return root;
         }
     }
 
-    /**
-     * 解法三 后续遍历法
-     */
-    public class Solution3 {
-        TreeNode pre=null;
-        public TreeNode Convert(TreeNode pRootOfTree) {
-            if (pRootOfTree==null)
-                return null;
-            Convert(pRootOfTree.right);
-            if (pre!= null){
-                pRootOfTree.right=pre;
-                pre.left=pRootOfTree;
-            }
-            pre=pRootOfTree;
-            Convert(pRootOfTree.left);
-            return pre;
-        }
-    }
+
 }

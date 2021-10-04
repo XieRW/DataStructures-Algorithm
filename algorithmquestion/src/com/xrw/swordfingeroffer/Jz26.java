@@ -23,6 +23,7 @@ public class Jz26 {
 
     }
 
+    //思路：用一个数组来存储中序遍历的节点，然后再从头到尾，建立节点前后的连接关系。
     public class Solution {
         public TreeNode Convert(TreeNode pRootOfTree) {
             if (pRootOfTree == null) {

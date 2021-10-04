@@ -54,6 +54,9 @@ public class Jz26 {
         }
     }
 
+    /**
+     * Ç°Ðò±éÀú·¨
+     */
     public class Solution2 {
         TreeNode pre=null;
         TreeNode root=null;

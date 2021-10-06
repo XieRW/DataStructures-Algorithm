@@ -1,5 +1,6 @@
 package com.xrw.swordfingeroffer;
 
+import java.util.ArrayList;
 /**
  * @program: DataStructures
  * @description: JZ27 ×Ö·û´®µÄÅÅÁÐ
@@ -7,4 +8,10 @@ package com.xrw.swordfingeroffer;
  * @create: 2021-10-06 18:47
  **/
 public class Jz27 {
+    public class Solution {
+        public ArrayList<String> Permutation(String str) {
+            String[] strs = str.split("");
+
+        }
+    }
 }

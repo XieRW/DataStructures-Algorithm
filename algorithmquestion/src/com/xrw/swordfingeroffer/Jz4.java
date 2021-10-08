@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 /**
  * @program: DataStructures
- * @description: 剑指offer第四题
+ * @description: JZ4 重建二叉树
+ * https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&tags=&title=&difficulty=0&judgeStatus=0&rp=0
  * @author: 谢荣旺 1429382875@qq.com
  * @create: 2021-08-13 10:25
  **/

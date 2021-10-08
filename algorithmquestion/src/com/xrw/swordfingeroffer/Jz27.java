@@ -12,8 +12,9 @@ public class Jz27 {
 
         public ArrayList<String> PermutationHelp(StringBuilder str){
             ArrayList<String> result = new  ArrayList<String>();
-            if(str.length() == 1)result.add(str.toString());
-            else{
+            if(str.length() == 1) {
+                result.add(str.toString());
+            } else{
                 for(int i = 0; i < str.length(); i++){
                     if(i== 0  || str.charAt(i) != str.charAt(0)){
                         char temp = str.charAt(i);

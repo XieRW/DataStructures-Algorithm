@@ -38,8 +38,7 @@ public class Jz27 {
 
         public ArrayList<String> Permutation(String str) {
             StringBuilder strBuilder = new StringBuilder(str);
-            ArrayList<String> result = PermutationHelp(strBuilder);
-            return result;
+            return PermutationHelp(strBuilder);
         }
     }
 }

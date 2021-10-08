@@ -2,7 +2,8 @@ package com.xrw.swordfingeroffer;
 
 /**
  * @program: DataStructures
- * @description: 剑指offer第十一题
+ * @description: JZ11 二进制中1的个数
+ * https://www.nowcoder.com/practice/8ee967e43c2c4ec193b040ea7fbb10b8?tpId=13&tags=&title=&difficulty=0&judgeStatus=0&rp=0
  * @author: 谢荣旺 1429382875@qq.com
  * @create: 2021-09-26 10:56
  **/

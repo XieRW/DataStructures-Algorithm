@@ -2,7 +2,8 @@ package com.xrw.swordfingeroffer;
 
 /**
  * @program: DataStructures
- * @description: 剑指offer第六题
+ * @description: JZ6 旋转数组的最小数字
+ * https://www.nowcoder.com/practice/9f3231a991af4f55b95579b44b7a01ba?tpId=13&tags=&title=&difficulty=0&judgeStatus=0&rp=0
  * @author: 谢荣旺 1429382875@qq.com
  * @create: 2021-09-22 23:00
  **/

@@ -4,7 +4,8 @@ import java.util.Stack;
 
 /**
  * @program: DataStructures
- * @description: 剑指offer第十三题
+ * @description: JZ13 调整数组顺序使奇数位于偶数前面
+ * https://www.nowcoder.com/practice/ef1f53ef31ca408cada5093c8780f44b?tpId=13&tags=&title=&difficulty=0&judgeStatus=0&rp=0
  * @author: 谢荣旺 1429382875@qq.com
  * @create: 2021-09-27 10:56
  **/

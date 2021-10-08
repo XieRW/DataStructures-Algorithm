@@ -6,6 +6,7 @@ import org.omg.CORBA.INTERNAL;
 /**
  * @program: DataStructures
  * @description: JZ30 连续子数组的最大和
+ * https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484?tpId=13&tags=&title=&difficulty=0&judgeStatus=0&rp=0
  * @author: 谢荣旺 1429382875@qq.com
  * @create: 2021-10-08 15:38
  **/

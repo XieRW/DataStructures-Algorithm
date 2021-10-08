@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @create: 2021-10-06 18:47
  **/
 public class Jz27 {
-    public class Solution {
+    public static class Solution {
 
         public ArrayList<String> PermutationHelp(StringBuilder str){
             ArrayList<String> result = new  ArrayList<String>();
@@ -21,8 +21,8 @@ public class Jz27 {
                         str.setCharAt(i, str.charAt(0));
                         str.setCharAt(0, temp);
                         ArrayList<String> newResult = PermutationHelp(new StringBuilder(str.substring(1)));
-                        for(int j =0; j < newResult.size(); j++) {
-                            result.add(str.substring(0,1)+newResult.get(j));
+                        for (String s : newResult) {
+                            result.add(str.substring(0, 1) + s);
                         }
                         //用完还是要放回去的
                         temp = str.charAt(0);

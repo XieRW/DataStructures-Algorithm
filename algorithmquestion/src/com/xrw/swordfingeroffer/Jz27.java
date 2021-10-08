@@ -20,8 +20,9 @@ public class Jz27 {
                         str.setCharAt(i, str.charAt(0));
                         str.setCharAt(0, temp);
                         ArrayList<String> newResult = PermutationHelp(new StringBuilder(str.substring(1)));
-                        for(int j =0; j < newResult.size(); j++)
+                        for(int j =0; j < newResult.size(); j++) {
                             result.add(str.substring(0,1)+newResult.get(j));
+                        }
                         //用完还是要放回去的
                         temp = str.charAt(0);
                         str.setCharAt(0, str.charAt(i));

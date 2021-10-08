@@ -1,6 +1,7 @@
 package com.xrw.swordfingeroffer;
 
 import java.util.ArrayList;
+
 /**
  * @program: DataStructures
  * @description: JZ27 ×Ö·û´®µÄÅÅÁÐ
@@ -20,13 +21,13 @@ public class Jz27 {
      */
     public static class Solution {
 
-        public ArrayList<String> permutationHelp(StringBuilder str){
-            ArrayList<String> result = new  ArrayList<String>();
-            if(str.length() == 1) {
+        public ArrayList<String> permutationHelp(StringBuilder str) {
+            ArrayList<String> result = new ArrayList<String>();
+            if (str.length() == 1) {
                 result.add(str.toString());
-            } else{
-                for(int i = 0; i < str.length(); i++){
-                    if(i== 0  || str.charAt(i) != str.charAt(0)){
+            } else {
+                for (int i = 0; i < str.length(); i++) {
+                    if (i == 0 || str.charAt(i) != str.charAt(0)) {
                         char temp = str.charAt(i);
                         str.setCharAt(i, str.charAt(0));
                         str.setCharAt(0, temp);

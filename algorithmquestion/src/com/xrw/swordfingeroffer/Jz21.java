@@ -5,6 +5,7 @@ import java.util.Stack;
 /**
  * @program: DataStructures
  * @description: JZ21 栈的压入、弹出序列
+ * https://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106?tpId=13&tags=&title=&difficulty=0&judgeStatus=0&rp=0
  * @author: 谢荣旺 1429382875@qq.com
  * @create: 2021-09-29 13:54
  **/

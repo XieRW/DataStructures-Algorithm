@@ -3,6 +3,7 @@ package com.xrw.swordfingeroffer;
 /**
  * @program: DataStructures
  * @description: JZ23 二叉搜索树的后序遍历序列
+ * https://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd?tpId=13&tags=&title=&difficulty=0&judgeStatus=0&rp=0
  * 输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历的结果。
  * 如果是则返回true,否则返回false。
  * 假设输入的数组的任意两个数字都互不相同。

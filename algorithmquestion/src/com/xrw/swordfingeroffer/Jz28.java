@@ -15,18 +15,18 @@ public class Jz28 {
      * 因为如果存在超过数组长度一半的值，那么最后preValue一定会是该值
      */
     public class Solution {
-        public int MoreThanHalfNum_Solution(int [] array) {
-            if (array.length == 0){
+        public int MoreThanHalfNum_Solution(int[] array) {
+            if (array.length == 0) {
                 return 0;
             }
             int count = 1;
             int preValue = array[0];
             for (int i = 1; i < array.length; i++) {
-                if (array[i] == preValue){
+                if (array[i] == preValue) {
                     count++;
-                }else {
+                } else {
                     count--;
-                    if (count == 0){
+                    if (count == 0) {
                         preValue = array[i];
                         count = 1;
                     }
@@ -36,11 +36,11 @@ public class Jz28 {
             //判断最后存活的数是否超过一半
             int num = 0;
             for (int i = 0; i < array.length; i++) {
-                if (array[i] == preValue){
+                if (array[i] == preValue) {
                     num++;
                 }
             }
-            return (num>array.length/2)?preValue:0;
+            return (num > array.length / 2) ? preValue : 0;
         }
     }
 }

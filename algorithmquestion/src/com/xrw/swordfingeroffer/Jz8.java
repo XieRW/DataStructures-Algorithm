@@ -2,7 +2,8 @@ package com.xrw.swordfingeroffer;
 
 /**
  * @program: DataStructures
- * @description: 剑指offer第八题
+ * @description: JZ8 跳台阶
+ * https://www.nowcoder.com/practice/8c82a5b80378478f9484d87d1c5f12a4?tpId=13&tags=&title=&difficulty=0&judgeStatus=0&rp=0
  * @author: 谢荣旺 1429382875@qq.com
  * @create: 2021-09-24 10:07
  **/

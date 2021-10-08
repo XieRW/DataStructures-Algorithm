@@ -2,7 +2,8 @@ package com.xrw.swordfingeroffer;
 
 /**
  * @program: DataStructures
- * @description: 剑指offer第十题
+ * @description: JZ10 矩形覆盖
+ * https://www.nowcoder.com/practice/72a5a919508a4251859fb2cfb987a0e6?tpId=13&tags=&title=&difficulty=0&judgeStatus=0&rp=0
  * @author: 谢荣旺 1429382875@qq.com
  * @create: 2021-09-26 10:39
  **/

@@ -8,6 +8,12 @@ package com.xrw.swordfingeroffer;
  * @create: 2021-10-08 10:29
  **/
 public class Jz28 {
+    /**
+     * 用preValue记录上一次访问的值，count表明当前值出现的次数，
+     * 如果下一个值和当前值相同那么count++；如果不同count--，
+     * 减到0的时候就要更换新的preValue值了，
+     * 因为如果存在超过数组长度一半的值，那么最后preValue一定会是该值
+     */
     public class Solution {
         public int MoreThanHalfNum_Solution(int [] array) {
             if (array.length == 0){

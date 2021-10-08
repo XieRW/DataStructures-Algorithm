@@ -4,15 +4,8 @@ import java.util.Scanner;
 
 /**
  * @program: DataStructures
- * @description: 牛客网剑指offer第二题
- * 描述
- * 请实现一个函数，将一个字符串中的每个空格替换成“%20”。
- * 例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
- * 示例1
- * 输入：
- * "We Are Happy"
- * 返回值：
- * "We%20Are%20Happy"
+ * @description: JZ2 替换空格
+ * https://www.nowcoder.com/practice/0e26e5551f2b489b9f58bc83aa4b6c68?tpId=13&tags=&title=&difficulty=0&judgeStatus=0&rp=0
  * @author: 谢荣旺 1429382875@qq.com
  * @create: 2021-08-12 16:28
  **/

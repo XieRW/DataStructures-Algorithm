@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Jz27 {
     public static class Solution {
 
-        public ArrayList<String> PermutationHelp(StringBuilder str){
+        public ArrayList<String> permutationHelp(StringBuilder str){
             ArrayList<String> result = new  ArrayList<String>();
             if(str.length() == 1) {
                 result.add(str.toString());
@@ -20,7 +20,7 @@ public class Jz27 {
                         char temp = str.charAt(i);
                         str.setCharAt(i, str.charAt(0));
                         str.setCharAt(0, temp);
-                        ArrayList<String> newResult = PermutationHelp(new StringBuilder(str.substring(1)));
+                        ArrayList<String> newResult = permutationHelp(new StringBuilder(str.substring(1)));
                         for (String s : newResult) {
                             result.add(str.substring(0, 1) + s);
                         }
@@ -38,7 +38,7 @@ public class Jz27 {
 
         public ArrayList<String> Permutation(String str) {
             StringBuilder strBuilder = new StringBuilder(str);
-            return PermutationHelp(strBuilder);
+            return permutationHelp(strBuilder);
         }
     }
 }

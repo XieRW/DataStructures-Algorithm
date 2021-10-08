@@ -2,7 +2,8 @@ package com.xrw.swordfingeroffer;
 
 /**
  * @program: DataStructures
- * @description: 剑指offer第七题
+ * @description: JZ7 斐波那契数列
+ * https://www.nowcoder.com/practice/c6c7742f5ba7442aada113136ddea0c3?tpId=13&tags=&title=&difficulty=0&judgeStatus=0&rp=0
  * @author: 谢荣旺 1429382875@qq.com
  * @create: 2021-09-24 09:17
  **/

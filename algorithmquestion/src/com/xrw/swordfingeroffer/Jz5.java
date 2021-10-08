@@ -4,7 +4,8 @@ import java.util.Stack;
 
 /**
  * @program: DataStructures
- * @description: 剑指offer第五题
+ * @description: JZ5 用两个栈实现队列
+ * https://www.nowcoder.com/practice/54275ddae22f475981afa2244dd448c6?tpId=13&tags=&title=&difficulty=0&judgeStatus=0&rp=0
  * @author: 谢荣旺 1429382875@qq.com
  * @create: 2021-09-22 22:43
  **/

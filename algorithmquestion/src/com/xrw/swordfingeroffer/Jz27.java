@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /**
  * @program: DataStructures
  * @description: JZ27 字符串的排列
+ * https://www.nowcoder.com/practice/fe6b651b66ae47d7acce78ffdd9a96c7?tpId=13&tags=&title=&difficulty=0&judgeStatus=0&rp=0
  * @author: 谢荣旺 1429382875@qq.com
  * @create: 2021-10-06 18:47
  **/
@@ -41,8 +42,6 @@ public class Jz27 {
                         str.setCharAt(i, temp);
                     }
                 }
-                //需要在做一个排序操作
-
             }
             return result;
         }

@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
  * @create: 2021-10-08 10:53
  **/
 public class Jz29 {
+
     public class Solution {
         public ArrayList<Integer> GetLeastNumbers_Solution(int[] input, int k) {
             ArrayList<Integer> collect = (ArrayList<Integer>) Arrays.stream(input).boxed().collect(Collectors.toList());

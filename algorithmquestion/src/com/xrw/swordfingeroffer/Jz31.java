@@ -10,7 +10,20 @@ package com.xrw.swordfingeroffer;
 public class Jz31 {
     public class Solution {
         public int NumberOf1Between1AndN_Solution(int n) {
-
+            int num;
+            int sum = 0;
+            int x;
+            for (int i = 1; i <= n; i++) {
+                num = i;
+                while (num != 0){
+                    x = num%10;
+                    if (x == 1){
+                        sum++;
+                    }
+                    num = num/10;
+                }
+            }
+            return sum;
         }
     }
 }

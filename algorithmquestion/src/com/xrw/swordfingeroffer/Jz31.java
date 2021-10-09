@@ -15,12 +15,12 @@ public class Jz31 {
             int x;
             for (int i = 1; i <= n; i++) {
                 num = i;
-                while (num != 0){
-                    x = num%10;
-                    if (x == 1){
+                while (num != 0) {
+                    x = num % 10;
+                    if (x == 1) {
                         sum++;
                     }
-                    num = num/10;
+                    num = num / 10;
                 }
             }
             return sum;

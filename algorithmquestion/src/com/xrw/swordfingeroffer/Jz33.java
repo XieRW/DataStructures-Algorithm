@@ -18,7 +18,9 @@ public class Jz33 {
          * 而不用维护三个数组。
          */
         public int GetUglyNumber_Solution(int index) {
-            if (index < 7) return index;
+            if (index < 7) {
+                return index;
+            }
             int i = 0, m = 0, n = 0;
             int[] num = new int[index];
             num[0] = 1;

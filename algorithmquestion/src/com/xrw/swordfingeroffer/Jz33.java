@@ -29,7 +29,9 @@ public class Jz33 {
                 if (num[j] == num[i] * 2) {
                     i++;
                 }
-                if (num[j] == num[m] * 3) m++;
+                if (num[j] == num[m] * 3) {
+                    m++;
+                }
                 if (num[j] == num[n] * 5) n++;
             }
             return num[index - 1];

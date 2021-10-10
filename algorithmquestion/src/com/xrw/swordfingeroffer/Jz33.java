@@ -1,7 +1,5 @@
 package com.xrw.swordfingeroffer;
 
-import java.util.LinkedList;
-
 /**
  * @program: DataStructures
  * @description: JZ33 ³óÊý

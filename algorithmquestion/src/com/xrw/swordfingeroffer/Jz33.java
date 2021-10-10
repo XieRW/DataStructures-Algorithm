@@ -7,6 +7,7 @@ package com.xrw.swordfingeroffer;
  * @create: 2021-10-10 23:25
  **/
 public class Jz33 {
+
     public class Solution {
         /**
          * 思路：我们可以维护三个list，分别是乘2得到的丑数，

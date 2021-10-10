@@ -26,7 +26,9 @@ public class Jz33 {
             num[0] = 1;
             for (int j = 1; j < index; j++) {
                 num[j] = Math.min(num[i] * 2, Math.min(num[m] * 3, num[n] * 5));
-                if (num[j] == num[i] * 2) i++;
+                if (num[j] == num[i] * 2) {
+                    i++;
+                }
                 if (num[j] == num[m] * 3) m++;
                 if (num[j] == num[n] * 5) n++;
             }

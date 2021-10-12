@@ -7,5 +7,9 @@ package com.xrw.swordfingeroffer;
  * @create: 2021-10-12 10:15
  **/
 public class Jz35 {
+    public class Solution {
+        public int InversePairs(int [] array) {
 
+        }
+    }
 }

@@ -100,7 +100,7 @@ public class Jz36 {
     }
 
     /**
-     * 方法三：用两个指针扫描”两个链表“，最终两个指针到达 null 或者到达公共结点。
+     * 方法三：用两个指针扫描“两个链表”，最终两个指针到达 null 或者到达公共结点。
      */
     public ListNode FindFirstCommonNode3(ListNode pHead1, ListNode pHead2) {
         ListNode temp1 = pHead1;

@@ -30,6 +30,7 @@ public class Jz35 {
                 for (int j = i + 1; j < array.length; j++) {
                     if (array[i] > array[j]) {
                         count++;
+                        //·ÀÖ¹Òç³ö
                         count %= 1000000007;
                     }
                 }

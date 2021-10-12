@@ -77,9 +77,9 @@ public class Jz36 {
 
         }
         //开始齐头并进，直到找到第一个公共结点
-        while(current1!=current2){
-            current1=current1.next;
-            current2=current2.next;
+        while (current1 != current2) {
+            current1 = current1.next;
+            current2 = current2.next;
         }
         return current1;
 
@@ -87,7 +87,7 @@ public class Jz36 {
 
     /**
      * 求指定链表的长度
-      */
+     */
     public static int getLength(ListNode pHead) {
         int length = 0;
 
@@ -99,5 +99,18 @@ public class Jz36 {
         return length;
     }
 
+    /**
+     * 方法三：用两个指针扫描”两个链表“，最终两个指针到达 null 或者到达公共结点。
+     */
+    public ListNode FindFirstCommonNode3(ListNode pHead1, ListNode pHead2) {
+        ListNode temp1 = pHead1;
+        ListNode temp2 = pHead2;
 
+        while (temp1 != temp2) {
+            temp1 = (temp1 == null) ? pHead2 : temp1.next;
+            temp2 = (temp2 == null) ? pHead1 : temp2.next;
+        }
+
+        return temp1;
+    }
 }

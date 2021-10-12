@@ -34,5 +34,24 @@ public class Jz34 {
             }
             return -1;
         }
+
+        /**
+         * 解法二：利用数组和hash记录每个字符出现的次数，然后找到第一个出现次数为1的字符所在的位置
+         */
+        public int FirstNotRepeatingChar2(String str) {
+            if (str == null || str.length() == 0){
+                return -1;
+            }
+            int[] count = new int[256];
+            for (int i = 0; i < str.length(); i++) {
+                count[str.charAt(i)]++;
+            }
+            for (int i = 0; i < str.length(); i++) {
+                if (count[str.charAt(i)] == 1){
+                    return i;
+                }
+            }
+            return -1;
+        }
     }
 }

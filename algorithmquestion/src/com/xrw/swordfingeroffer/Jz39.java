@@ -20,6 +20,11 @@ public class Jz39 {
     }
 
     public class Solution {
+        /**
+         * 思路：求根节点的左右子树是否深度差小于等于1，再求其左右子树的左右子树的深度差小于等于1，递归求解
+         * @param root
+         * @return
+         */
         public boolean IsBalanced_Solution(TreeNode root) {
             if (root == null){
                 return true;
@@ -27,6 +32,11 @@ public class Jz39 {
             return Math.abs(deep(root.left)-deep(root.right))<=1 && IsBalanced_Solution(root.left) && IsBalanced_Solution(root.right);
         }
 
+        /**
+         * 求节点深度
+         * @param root
+         * @return
+         */
         public int deep(TreeNode root){
             if (root == null){
                 return 0;

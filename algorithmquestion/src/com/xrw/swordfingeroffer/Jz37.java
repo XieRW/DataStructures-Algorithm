@@ -7,11 +7,16 @@ package com.xrw.swordfingeroffer;
  * @create: 2021-10-13 09:50
  **/
 public class Jz37 {
+    /**
+     * 解法1：遍历数组，时间复杂度O(n)
+     */
     public class Solution {
         public int GetNumberOfK(int [] array , int k) {
             int count = 0;
             for(int e:array){
-                if(k==e) count++;
+                if(k==e) {
+                    count++;
+                }
             }
             return count;
         }

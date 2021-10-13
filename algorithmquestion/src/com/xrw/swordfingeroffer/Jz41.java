@@ -1,6 +1,7 @@
 package com.xrw.swordfingeroffer;
 
 import java.util.ArrayList;
+
 /**
  * @program: DataStructures
  * @description: JZ41 和为S的连续正数序列
@@ -20,27 +21,27 @@ public class Jz41 {
      * 循环结束
      */
     public class Solution {
-        public ArrayList<ArrayList<Integer> > FindContinuousSequence(int sum) {
+        public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {
             ArrayList<ArrayList<Integer>> lists = new ArrayList<>();
-            if (sum<=1){
+            if (sum <= 1) {
                 return lists;
             }
-            int left=1,right=2,tempSum=left+right;
-            while (right<=sum/2+1){
-                if (tempSum<sum){
+            int left = 1, right = 2, tempSum = left + right;
+            while (right <= sum / 2 + 1) {
+                if (tempSum < sum) {
                     right++;
-                    tempSum+=right;
-                }else if (tempSum>sum){
-                    tempSum-=left;
+                    tempSum += right;
+                } else if (tempSum > sum) {
+                    tempSum -= left;
                     left++;
-                }else {
+                } else {
                     ArrayList<Integer> list = new ArrayList<>();
-                    for (int i = left; i <= right ; i++) {
+                    for (int i = left; i <= right; i++) {
                         list.add(i);
                     }
                     lists.add(list);
                     right++;
-                    tempSum+=right;
+                    tempSum += right;
                 }
             }
             return lists;

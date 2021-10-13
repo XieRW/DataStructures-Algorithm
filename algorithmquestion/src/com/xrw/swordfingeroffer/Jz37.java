@@ -22,6 +22,9 @@ public class Jz37 {
         }
     }
 
+    /**
+     * 解法二：二分法，时间复杂度O(log n)
+     */
     public class Solution2 {
         public int GetNumberOfK(int [] array , int k) {
             if (array.length == 0){

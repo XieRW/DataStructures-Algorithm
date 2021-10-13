@@ -30,4 +30,29 @@ public class Jz42 {
             return list;
         }
     }
+
+    /**
+     * 解法二：双指针法
+     */
+    public class Solution2 {
+        public ArrayList<Integer> FindNumbersWithSum(int[] array, int sum) {
+            ArrayList<Integer> list = new ArrayList<>();
+            if (array.length < 2) {
+                return list;
+            }
+            int start=0,end=array.length-1;
+            while (start<end){
+                if (array[start]+array[end]>sum){
+                    end--;
+                }else if (array[start]+array[end]<sum){
+                    start++;
+                }else {
+                    list.add(array[start]);
+                    list.add(array[end]);
+                    return list;
+                }
+            }
+            return list;
+        }
+    }
 }

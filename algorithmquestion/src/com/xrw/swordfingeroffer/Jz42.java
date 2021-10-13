@@ -40,13 +40,13 @@ public class Jz42 {
             if (array.length < 2) {
                 return list;
             }
-            int start=0,end=array.length-1;
-            while (start<end){
-                if (array[start]+array[end]>sum){
+            int start = 0, end = array.length - 1;
+            while (start < end) {
+                if (array[start] + array[end] > sum) {
                     end--;
-                }else if (array[start]+array[end]<sum){
+                } else if (array[start] + array[end] < sum) {
                     start++;
-                }else {
+                } else {
                     list.add(array[start]);
                     list.add(array[end]);
                     return list;

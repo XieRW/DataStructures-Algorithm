@@ -43,6 +43,10 @@ public class Jz47 {
             return null;
         }
 
+        /**
+         * ÖÐÐò±éÀú
+         * @param node
+         */
         public void midOrder(TreeLinkNode node) {
             if (node != null) {
                 midOrder(node.left);

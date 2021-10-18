@@ -28,7 +28,7 @@ public class Jz45 {
      * Ë«Õ»·¨
      */
     public class Solution {
-        public ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {
+        public ArrayList<ArrayList<Integer> > print(TreeNode pRoot) {
             ArrayList<ArrayList<Integer>> result = new ArrayList<>();
             if(pRoot == null) {
                 return result;

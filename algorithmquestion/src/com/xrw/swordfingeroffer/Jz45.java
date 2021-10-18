@@ -54,21 +54,19 @@ public class Jz45 {
                     result.add(flood);
                     continue;
                 }
-                if(tmp1.size() > 0) {
-                    int size = tmp1.size();
-                    for(int i=0; i<size; i++) {
-                        TreeNode pop = tmp1.pop();
-                        flood.add(pop.val);
-                        if(pop.right != null) {
-                            tmp.add(pop.right);
-                        }
-                        if(pop.left != null) {
-                            tmp.add(pop.left);
-                        }
+                int size = tmp1.size();
+                for(int i=0; i<size; i++) {
+                    TreeNode pop = tmp1.pop();
+                    flood.add(pop.val);
+                    if(pop.right != null) {
+                        tmp.add(pop.right);
                     }
-                    result.add(flood);
-                    continue;
+                    if(pop.left != null) {
+                        tmp.add(pop.left);
+                    }
                 }
+                result.add(flood);
+                continue;
             }
             return result;
         }

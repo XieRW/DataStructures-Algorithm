@@ -73,7 +73,7 @@ public class Jz45 {
     }
 
     /**
-     * 队列
+     * 队列，BFS
      */
     public class Solution2 {
         public ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {

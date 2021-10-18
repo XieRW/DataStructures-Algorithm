@@ -72,6 +72,9 @@ public class Jz45 {
 
     }
 
+    /**
+     * ╤сап
+     */
     public class Solution2 {
         public ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {
             LinkedList<TreeNode> q = new LinkedList<>();

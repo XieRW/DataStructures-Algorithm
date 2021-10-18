@@ -66,7 +66,6 @@ public class Jz45 {
                     }
                 }
                 result.add(flood);
-                continue;
             }
             return result;
         }

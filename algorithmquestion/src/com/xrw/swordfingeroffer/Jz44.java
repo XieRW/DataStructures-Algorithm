@@ -24,14 +24,14 @@ public class Jz44 {
             ListNode head = new ListNode(0);
             head.next = pHead;
             ListNode temp = head;
-            while (pHead!=null){
-                if (pHead.next!=null&&pHead.val == pHead.next.val){
-                    pHead=pHead.next;
-                    while (pHead.next!=null&&pHead.val == pHead.next.val){
-                        pHead=pHead.next;
+            while (pHead != null) {
+                if (pHead.next != null && pHead.val == pHead.next.val) {
+                    pHead = pHead.next;
+                    while (pHead.next != null && pHead.val == pHead.next.val) {
+                        pHead = pHead.next;
                     }
                     temp.next = pHead.next;
-                }else {
+                } else {
                     temp = temp.next;
                 }
                 pHead = pHead.next;

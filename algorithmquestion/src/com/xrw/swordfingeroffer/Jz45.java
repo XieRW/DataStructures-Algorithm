@@ -30,7 +30,9 @@ public class Jz45 {
     public class Solution {
         public ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {
             ArrayList<ArrayList<Integer>> result = new ArrayList<>();
-            if(pRoot == null) return result;
+            if(pRoot == null) {
+                return result;
+            }
             Stack<TreeNode> tmp = new Stack<>();
             Stack<TreeNode> tmp1 = new Stack<>();
             tmp.add(pRoot);

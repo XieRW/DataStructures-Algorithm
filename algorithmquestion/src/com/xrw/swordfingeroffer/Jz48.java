@@ -18,6 +18,12 @@ public class Jz48 {
         }
 
     }
+
+    /**
+     * 设置一个递归函数isSame(r1, r2),表示如果对称，返回true，否则返回false
+     * 递归终止条件：r1==nullptr && r2==nulllptr, 直接返回true，否则，如果只有一个为nullptr，返回false
+     * 下一步递归：如果r1->val == r2->val, 则isSame(root1->left, root2->right) && isSame(root1->right, root2->left);
+     */
     public class Solution {
         boolean isSymmetrical(TreeNode pRoot) {
             return isSame(pRoot.left,pRoot.right);

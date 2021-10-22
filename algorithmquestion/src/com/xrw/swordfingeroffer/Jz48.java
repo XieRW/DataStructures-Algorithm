@@ -25,6 +25,7 @@ public class Jz48 {
      * 下一步递归：如果r1->val == r2->val, 则isSame(root1->left, root2->right) && isSame(root1->right, root2->left);
      */
     public class Solution {
+
         boolean isSymmetrical(TreeNode pRoot) {
             return isSame(pRoot.left, pRoot.right);
         }

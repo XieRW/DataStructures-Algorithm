@@ -19,7 +19,6 @@ public class Jz48 {
         }
 
     }
-
     public class Solution {
         boolean isSymmetrical(TreeNode pRoot) {
             return isSame(pRoot.left,pRoot.right);

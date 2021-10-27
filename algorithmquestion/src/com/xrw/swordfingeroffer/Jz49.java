@@ -16,7 +16,6 @@ public class Jz49 {
 
         public TreeNode(int val) {
             this.val = val;
-
         }
     }
 

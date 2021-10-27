@@ -16,6 +16,7 @@ public class Jz33 {
          * 而不用维护三个数组。
          */
         public int GetUglyNumber_Solution(int index) {
+            //小于7直接返回
             if (index < 7) {
                 return index;
             }

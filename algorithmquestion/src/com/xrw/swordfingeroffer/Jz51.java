@@ -7,7 +7,6 @@ package com.xrw.swordfingeroffer;
  * @create: 2021-11-01 11:05
  **/
 public class Jz51 {
-
     public class Solution {
         public String ReverseSentence(String str) {
 

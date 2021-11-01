@@ -8,7 +8,7 @@ package com.xrw.swordfingeroffer;
  * 例如，“nowcoder. a am I”。
  * 后来才意识到，这家伙原来把句子单词的顺序翻转了，正确的句子应该是“I am a nowcoder.”。
  * Cat对一一的翻转这些单词顺序可不在行，你能帮助他么？
- *
+ * <p>
  * 输入：
  * "nowcoder. a am I"
  * 返回值：
@@ -19,19 +19,15 @@ package com.xrw.swordfingeroffer;
 public class Jz51 {
     public class Solution {
         public String ReverseSentence(String str) {
-            if (str==null){
+            if (str == null) {
                 return null;
             }
             String[] strs = str.split(" ");
             StringBuilder sb = new StringBuilder();
-            for (int i = strs.length-1; i >= 0; i--) {
-                if (i==0){
-                    sb.append(strs[i]);
-                }else {
-                    sb.append(strs[i]+ " ");
-                }
+            for (int i = strs.length - 1; i >= 0; i--) {
+                sb.append(strs[i] + " ");
             }
-            return sb.toString();
+            return sb.toString().trim();
         }
     }
 }

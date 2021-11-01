@@ -19,7 +19,15 @@ package com.xrw.swordfingeroffer;
 public class Jz51 {
     public class Solution {
         public String ReverseSentence(String str) {
-
+            if (str==null){
+                return null;
+            }
+            String[] strs = str.split(" ");
+            StringBuilder sb = new StringBuilder();
+            for (int i = strs.length-1; i >= 0; i--) {
+                sb.append(strs[i]+ " ");
+            }
+            return sb.toString();
         }
     }
 }

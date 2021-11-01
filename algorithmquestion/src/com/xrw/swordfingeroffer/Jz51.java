@@ -9,7 +9,6 @@ package com.xrw.swordfingeroffer;
 public class Jz51 {
     public class Solution {
         public String ReverseSentence(String str) {
-
         }
     }
 }

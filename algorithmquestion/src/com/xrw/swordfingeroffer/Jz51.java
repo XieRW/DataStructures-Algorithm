@@ -25,7 +25,11 @@ public class Jz51 {
             String[] strs = str.split(" ");
             StringBuilder sb = new StringBuilder();
             for (int i = strs.length-1; i >= 0; i--) {
-                sb.append(strs[i]+ " ");
+                if (i==0){
+                    sb.append(strs[i]);
+                }else {
+                    sb.append(strs[i]+ " ");
+                }
             }
             return sb.toString();
         }

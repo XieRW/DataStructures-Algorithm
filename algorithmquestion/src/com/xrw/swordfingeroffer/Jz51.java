@@ -18,6 +18,9 @@ package com.xrw.swordfingeroffer;
  **/
 public class Jz51 {
 
+    /**
+     * 通过java的库函数分割字符串，然后反向拼接
+     */
     public class Solution {
 
         public String ReverseSentence(String str) {

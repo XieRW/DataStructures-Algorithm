@@ -1,7 +1,5 @@
 package com.xrw.swordfingeroffer;
 
-import java.util.*;
-
 /**
  * @program: DataStructures
  * @description: 数组中重复的数字
